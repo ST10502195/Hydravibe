@@ -41,9 +41,13 @@
   </div>
 </section>
 
-<section class="container split">
+<section class="container split reveal">
   <div class="art">
-    <img src="images/eye-serum.jpg" alt="Hydravibe Eye Serum">
+    <picture>
+      <source media="(max-width: 720px)" srcset="images/eye-serum-480w.jpg">
+      <source media="(min-width: 721px)" srcset="images/eye-serum-800w.jpg">
+      <img src="images/eye-serum-800w.jpg" alt="Hydravibe Eye Serum" width="800" height="1200" loading="lazy">
+    </picture>
   </div>
   <div class="text">
     <span class="eyebrow">Who We Are</span>
@@ -53,9 +57,13 @@
   </div>
 </section>
 
-<section class="container split reverse">
+<section class="container split reverse reveal">
   <div class="art">
-    <img src="images/night-mask.jpg" alt="Hydravibe Night Mask">
+    <picture>
+      <source media="(max-width: 720px)" srcset="images/night-mask-480w.jpg">
+      <source media="(min-width: 721px)" srcset="images/night-mask-800w.jpg">
+      <img src="images/night-mask-800w.jpg" alt="Hydravibe Night Mask" width="800" height="1000" loading="lazy">
+    </picture>
   </div>
   <div class="text">
     <span class="eyebrow">Mission & Vision</span>
@@ -71,7 +79,7 @@
       <span class="eyebrow">What We Stand For</span>
       <h2>Our values</h2>
     </div>
-    <div class="about-values-grid">
+    <div class="about-values-grid reveal-stagger">
       <div class="about-card">
         <h3>Hydration First</h3>
         <p>Every product in our range is formulated around hydration as the foundation of healthy skin.</p>

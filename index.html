@@ -44,7 +44,11 @@
       </div>
     </div>
     <div class="hero-art">
-      <img src="images/logo.jpg" alt="Hydravibe droplet emblem">
+      <picture>
+        <source media="(max-width: 720px)" srcset="images/logo-480w.jpg">
+        <source media="(min-width: 721px)" srcset="images/logo-800w.jpg">
+        <img src="images/logo-800w.jpg" alt="Hydravibe droplet emblem" width="800" height="800">
+      </picture>
     </div>
   </div>
   <div class="drip-divider">
@@ -54,9 +58,34 @@
   </div>
 </section>
 
+<!-- ===== 3D PRODUCT SHOWCASE ===== -->
+<section class="showcase3d">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:var(--hot-pink);">The Full Collection</span>
+      <h2 style="color:var(--white);">Drag to spin the shelf</h2>
+      <p style="color:var(--grey-light);">Every Hydravibe formula, floating in one view. Click and drag — or just watch it turn.</p>
+    </div>
+  </div>
+  <div class="showcase3d-stage" id="showcase3d-stage">
+    <div class="showcase3d-carousel" id="showcase3d-carousel">
+      <div class="showcase3d-item"><img src="images/hyaluronic-acid-serum-480w.jpg" alt="Hyaluronic Acid Serum" draggable="false"></div>
+      <div class="showcase3d-item"><img src="images/niacinamide-serum-480w.jpg" alt="Niacinamide Serum" draggable="false"></div>
+      <div class="showcase3d-item"><img src="images/eye-serum-480w.jpg" alt="Eye Serum" draggable="false"></div>
+      <div class="showcase3d-item"><img src="images/milk-moisturiser-480w.jpg" alt="Milk Moisturiser Cleanser" draggable="false"></div>
+      <div class="showcase3d-item"><img src="images/salicylic-acid-toner-480w.jpg" alt="Salicylic Acid Exfoliating Toner" draggable="false"></div>
+      <div class="showcase3d-item"><img src="images/acne-spray-480w.jpg" alt="Acne Spray Treatment" draggable="false"></div>
+      <div class="showcase3d-item"><img src="images/night-mask-480w.jpg" alt="Night Mask" draggable="false"></div>
+      <div class="showcase3d-item"><img src="images/overnight-cream-480w.jpg" alt="Overnight Cream" draggable="false"></div>
+      <div class="showcase3d-item"><img src="images/eyelash-conditioner-480w.jpg" alt="Advanced Eyelash Conditioner" draggable="false"></div>
+    </div>
+    <div class="showcase3d-floor"></div>
+  </div>
+</section>
+
 <!-- ===== VALUES STRIP ===== -->
 <section class="values">
-  <div class="container values-grid">
+  <div class="container values-grid reveal-stagger">
     <div class="value-item">
       <div class="icon"></div>
       <h4>Deep Hydration</h4>
@@ -88,9 +117,9 @@
       <h2>Bestselling essentials</h2>
       <p>The everyday heroes our customers keep coming back for.</p>
     </div>
-    <div class="product-grid">
+    <div class="product-grid reveal-stagger">
       <div class="product-card">
-        <div class="thumb"><img src="images/hyaluronic-acid-serum.jpg" alt="Hyaluronic Acid Serum"></div>
+        <div class="thumb"><img src="images/hyaluronic-acid-serum-800w.jpg" srcset="images/hyaluronic-acid-serum-480w.jpg 480w, images/hyaluronic-acid-serum-800w.jpg 800w, images/hyaluronic-acid-serum.jpg 1122w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Hyaluronic Acid Serum" loading="lazy"></div>
         <div class="info">
           <span class="tag">Bestseller</span>
           <h3>Hyaluronic Acid Serum</h3>
@@ -99,7 +128,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="thumb"><img src="images/night-mask.jpg" alt="Night Mask"></div>
+        <div class="thumb"><img src="images/night-mask-800w.jpg" srcset="images/night-mask-480w.jpg 480w, images/night-mask-800w.jpg 800w, images/night-mask.jpg 1122w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Night Mask" loading="lazy"></div>
         <div class="info">
           <span class="tag">Overnight</span>
           <h3>Night Mask</h3>
@@ -108,7 +137,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="thumb"><img src="images/milk-moisturiser.jpg" alt="Milk Moisturiser Cleanser"></div>
+        <div class="thumb"><img src="images/milk-moisturiser-800w.jpg" srcset="images/milk-moisturiser-480w.jpg 480w, images/milk-moisturiser-800w.jpg 800w, images/milk-moisturiser.jpg 1122w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Milk Moisturiser Cleanser" loading="lazy"></div>
         <div class="info">
           <span class="tag">Cleanser</span>
           <h3>Milk Moisturiser Cleanser</h3>
@@ -117,7 +146,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="thumb"><img src="images/overnight-cream.jpg" alt="Overnight Cream"></div>
+        <div class="thumb"><img src="images/overnight-cream-800w.jpg" srcset="images/overnight-cream-480w.jpg 480w, images/overnight-cream-800w.jpg 800w, images/overnight-cream.jpg 1024w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Overnight Cream" loading="lazy"></div>
         <div class="info">
           <span class="tag">Night Care</span>
           <h3>Overnight Cream</h3>
@@ -133,9 +162,13 @@
 </section>
 
 <!-- ===== STORY TEASER ===== -->
-<section class="container split">
+<section class="container split reveal">
   <div class="art">
-    <img src="images/niacinamide-serum.jpg" alt="Hydravibe Niacinamide Serum">
+    <picture>
+      <source media="(max-width: 720px)" srcset="images/niacinamide-serum-480w.jpg">
+      <source media="(min-width: 721px)" srcset="images/niacinamide-serum-800w.jpg">
+      <img src="images/niacinamide-serum-800w.jpg" alt="Hydravibe Niacinamide Serum" width="800" height="1200" loading="lazy">
+    </picture>
   </div>
   <div class="text">
     <span class="eyebrow">Our Story</span>
@@ -146,7 +179,7 @@
 </section>
 
 <!-- ===== NEWSLETTER ===== -->
-<section class="newsletter">
+<section class="newsletter reveal">
   <div class="container">
     <h2>Get 10% off your first order</h2>
     <p>Join the Hydravibe list for skincare tips, launches and offers.</p>
