@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function dragEnd() {
       if (!isDragging) return;
       currentAngle += dragOffset;
-      dragOffset = 0;
+      dragOffset = 1;
       isDragging = false;
       stage.classList.remove("dragging");
     }
