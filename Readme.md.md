@@ -1,9 +1,11 @@
 # Hydravibe Website — WEDE5011 Portfolio of Evidence
 
-**Student:** Samantha George
+**Student:** Samantha Rochelle George
 **Student Number:** ST10502195
 **Subject:** Web Development (WEDE5011)
 **Organisation:** Hydravibe — a small skincare business (own brand)
+**Repository:** https://github.com/ST10502195/Hydravibe
+**Live site:** <PASTE YOUR LIVE URL HERE>
 
 ---
 
@@ -11,13 +13,14 @@
 
 Hydravibe is a hydration-first skincare small business. This repository contains the
 website built for Hydravibe across the assignment's parts: static HTML structure,
-CSS styling, and responsive design.
+CSS styling and responsive design, and JavaScript interactivity with SEO.
 
 **Goals & Objectives**
 - Give Hydravibe a functional, trustworthy online presence
 - Support product discovery and enquiries (no live checkout in this phase)
 - Reflect the brand's hot pink + black visual identity
 - Work cleanly across desktop, tablet and mobile screens
+- Be easy to find through search engines (Part 3)
 
 ---
 
@@ -25,11 +28,15 @@ CSS styling, and responsive design.
 
 - 5 linked pages: Home, About, Products, Enquiry, Contact
 - Hot pink (`#ff1178`) + black brand identity with a droplet motif
-- Product catalogue (9 products) with an enquiry flow (no backend — front-end only)
+- Product catalogue (9 products) with an enquiry flow
+- Dynamic product listing with search, filter and sort (Part 3)
+- Interactive components: accordion, modal, lightbox and Leaflet map (Part 3)
+- Enquiry and Contact forms with JavaScript validation and AJAX submission (Part 3)
 - Two store locations with an embedded map on the Contact page
 - Fully responsive layout (desktop / tablet / mobile) with a mobile nav menu
 - Responsive images via `srcset`/`sizes` (product thumbnails) and `<picture>`
   (hero + story images)
+- SEO basics: meta tags, `robots.txt` and `sitemap.xml` (Part 3)
 
 ---
 
@@ -53,6 +60,8 @@ Home (index.html)
 ├── products.html
 ├── enquiry.html
 ├── contact.html
+├── robots.txt
+├── sitemap.xml
 ├── css/
 │   └── style.css
 ├── js/
@@ -124,6 +133,43 @@ Home (index.html)
   emulation for tablet (iPad-width) and mobile (390px-width) — screenshots
   below
 
+## Part 3 — Enhancing Functionality and SEO
+
+Part 3 builds on the pure HTML/CSS site from Part 2 by adding JavaScript
+interactivity, search engine optimisation (SEO), working forms and deployment.
+
+### 1. JavaScript Interactivity
+- **Accordion:** expandable sections so users only see the content they open
+- **Modal:** pop-up dialog for extra information, opened and closed with
+  JavaScript
+- **Lightbox:** clicking an image opens an enlarged view
+- **Interactive map:** a Leaflet map showing the Hydravibe store locations
+- **Dynamic product listing:** products are rendered from a JavaScript data
+  array, with:
+  - **Search** by product name
+  - **Filter** by category
+  - **Sort** (for example by name or price)
+
+### 2. SEO
+- **Meta tags:** a unique `<title>` and meta description on every page, plus
+  viewport and charset tags
+- **`robots.txt`:** tells search engine crawlers what they may crawl and where
+  the sitemap is
+- **`sitemap.xml`:** lists the site's pages to help search engines index them
+- Semantic HTML and descriptive `alt` text on images
+
+### 3. Forms and Validation
+- **`enquiry.html`** and **`contact.html`** use HTML forms with required
+  fields and JavaScript validation (empty fields, valid email format) with
+  clear error messages
+- **AJAX submission:** forms are submitted without a page reload, and a
+  success or error message is shown to the user
+- **Contact form:** compiles the user's details into an email message
+
+### 4. Deployment
+The site is deployed on a free hosting platform (GitHub Pages):
+<PASTE YOUR LIVE URL HERE>
+
 ---
 
 ## Responsive Screenshot Evidence
@@ -158,9 +204,20 @@ Home (index.html)
 ## Changelog
 
 No lecturer feedback had been released for Part 1 at the time Part 2 was
-started, so the entries below are a general self-review/polish pass rather
-than feedback-driven corrections. Real feedback entries will be added here
-under a new dated heading once marks are released.
+started, so the Part 2 entries below are a general self-review/polish pass
+rather than feedback-driven corrections. Real feedback entries will be added
+here under a new dated heading once marks are released.
+
+### Part 3 — [Date of submission]
+- **Added:** JavaScript interactivity — accordion, modal, lightbox and a
+  Leaflet map
+- **Added:** dynamic product listing with search, filter and sort
+- **Added:** SEO — unique meta titles/descriptions on every page,
+  `robots.txt` and `sitemap.xml`
+- **Added:** JavaScript validation and AJAX submission on `enquiry.html` and
+  `contact.html`; the contact form compiles the user's details into an email
+- **Updated:** README and changelog to cover Part 3
+- **Deployed:** site published on a free hosting platform (GitHub Pages)
 
 ### Part 2 — [Date of submission]
 - **Added:** CSS animations — hero entrance (fade/slide-up on load), a
@@ -207,3 +264,5 @@ under a new dated heading once marks are released.
   https://fonts.google.com
 - Coolors. Colour palette generator used to develop the hot pink/black
   colour scheme. Available at: https://coolors.co
+- Leaflet. Open-source JavaScript library for interactive maps. Available at:
+  https://leafletjs.com
