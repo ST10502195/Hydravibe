@@ -1,5 +1,20 @@
 // Mobile navigation toggle
 document.addEventListener("DOMContentLoaded", function () {
+  // Scroll reveal: show sections as they enter the screen
+  const revealEls = document.querySelectorAll(".reveal, .reveal-stagger");
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("in-view"); });
+  }
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
 
