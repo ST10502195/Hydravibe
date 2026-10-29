@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://st10502195.github.io/Hydravibe/sitemap.xml
