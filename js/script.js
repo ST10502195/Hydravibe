@@ -251,3 +251,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+/* ---------- 3D drag-to-spin showcase ---------- */
+  const stage = document.getElementById("showcase3d-stage");
+  const carousel = document.getElementById("showcase3d-carousel");
+  if (stage && carousel) {
+    const items = carousel.querySelectorAll(".showcase3d-item");
+    const n = items.length;
+    const step = 360 / n;
+    let angle = 0, dragging = false, startX = 0, startAngle = 0;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    carousel.style.transformStyle = "preserve-3d";
+    if (getComputedStyle(stage).perspective === "none") stage.style.perspective = "1000px";
+    stage.style.cursor = "grab";
+    stage.style.touchAction = "pan-y";
+
+    function layout() {
+      const w = items[0].offsetWidth || 160;
+      const radius = Math.round((w / 2) / Math.tan(Math.PI / n)) + 30;
+      items.forEach(function (item, i) {
+        item.style.transform = "rotateY(" + (i * step) + "deg) translateZ(" + radius + "px)";
+      });
+    }
+    function render() {
+      carousel.style.transform = "rotateY(" + angle + "deg)";
+    }
+
+    stage.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      startX = e.clientX;
+      startAngle = angle;
+      stage.style.cursor = "grabbing";
+      stage.setPointerCapture(e.pointerId);
+    });
+    stage.addEventListener("pointermove", function (e) {
+      if (!dragging) return;
+      angle = startAngle + (e.clientX - startX) * 0.4;
+      render();
+    });
+    function stopDrag() {
+      dragging = false;
+      stage.style.cursor = "grab";
+    }
+    stage.addEventListener("pointerup", stopDrag);
+    stage.addEventListener("pointercancel", stopDrag);
+
+    // gentle auto-spin when not being dragged
+    function tick() {
+      if (!dragging && !reduceMotion) {
+        angle -= 0.15;
+        render();
+      }
+      requestAnimationFrame(tick);
+    }
+
+    window.addEventListener("resize", layout);
+    layout();
+    render();
+    tick();
+  }
