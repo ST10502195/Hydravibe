@@ -43,98 +43,42 @@
 
 <section class="products" style="padding-top:20px;">
   <div class="container">
-    <div class="product-grid full reveal-stagger">
 
-      <div class="product-card">
-        <div class="thumb"><img src="images/hyaluronic-acid-serum-800w.jpg" srcset="images/hyaluronic-acid-serum-480w.jpg 480w, images/hyaluronic-acid-serum-800w.jpg 800w, images/hyaluronic-acid-serum.jpg 1122w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Hyaluronic Acid Serum" loading="lazy"></div>
-        <div class="info">
-          <span class="tag">Serum</span>
-          <h3>Hyaluronic Acid Serum</h3>
-          <p class="desc">Intense hydration that plumps, smooths and glows. Gentle and fragrance-free. 30ml.</p>
-          <a href="enquiry.html" class="enquire">Enquire about this product →</a>
-        </div>
+    <!-- Part 3: search, filter and sort -->
+    <div class="product-controls">
+      <input type="search" id="search" placeholder="Search products…" aria-label="Search products">
+      <select id="category" aria-label="Filter by category">
+        <option value="all">All categories</option>
+      </select>
+      <select id="sort" aria-label="Sort products">
+        <option value="az">Name A–Z</option>
+        <option value="za">Name Z–A</option>
+      </select>
+    </div>
+    <p class="result-count" id="result-count" aria-live="polite"></p>
+
+    <!-- Products are built by js/script.js from the PRODUCTS array -->
+    <div class="product-grid full" id="product-grid"></div>
+  </div>
+</section>
+
+<!-- Part 3: accordion (FAQ) -->
+<section class="products" style="padding-top:0;">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:20px;">Frequently asked questions</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false" aria-controls="faq1">How do I choose the right product?</button>
+        <div class="accordion-panel" id="faq1" hidden>Use the search box and category filter above to browse the range, or send us an enquiry and we'll help you build a routine.</div>
       </div>
-
-      <div class="product-card">
-        <div class="thumb"><img src="images/niacinamide-serum-800w.jpg" srcset="images/niacinamide-serum-480w.jpg 480w, images/niacinamide-serum-800w.jpg 800w, images/niacinamide-serum.jpg 1024w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Niacinamide Serum" loading="lazy"></div>
-        <div class="info">
-          <span class="tag">Serum</span>
-          <h3>Niacinamide Serum</h3>
-          <p class="desc">Brightens, balances and refines pores with 10% niacinamide and zinc PCA. 30ml.</p>
-          <a href="enquiry.html" class="enquire">Enquire about this product →</a>
-        </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false" aria-controls="faq2">How do I enquire about a product?</button>
+        <div class="accordion-panel" id="faq2" hidden>Click "Enquire about this product" on any product card and complete the enquiry form. We'll reply by email.</div>
       </div>
-
-      <div class="product-card">
-        <div class="thumb"><img src="images/eye-serum-800w.jpg" srcset="images/eye-serum-480w.jpg 480w, images/eye-serum-800w.jpg 800w, images/eye-serum.jpg 1024w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Eye Serum" loading="lazy"></div>
-        <div class="info">
-          <span class="tag">Eye Care</span>
-          <h3>Eye Serum</h3>
-          <p class="desc">Depuffs, hydrates and brightens with caffeine and peptides. 15ml.</p>
-          <a href="enquiry.html" class="enquire">Enquire about this product →</a>
-        </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false" aria-controls="faq3">Where can I find Hydravibe in person?</button>
+        <div class="accordion-panel" id="faq3" hidden>Visit the Contact page to see our store locations on the map.</div>
       </div>
-
-      <div class="product-card">
-        <div class="thumb"><img src="images/milk-moisturiser-800w.jpg" srcset="images/milk-moisturiser-480w.jpg 480w, images/milk-moisturiser-800w.jpg 800w, images/milk-moisturiser.jpg 1122w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Milk Moisturiser Cleanser" loading="lazy"></div>
-        <div class="info">
-          <span class="tag">Cleanser</span>
-          <h3>Milk Moisturiser Cleanser</h3>
-          <p class="desc">A creamy cleanser that melts away dirt while hydrating and nourishing. 150ml.</p>
-          <a href="enquiry.html" class="enquire">Enquire about this product →</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="thumb"><img src="images/salicylic-acid-toner-800w.jpg" srcset="images/salicylic-acid-toner-480w.jpg 480w, images/salicylic-acid-toner-800w.jpg 800w, images/salicylic-acid-toner.jpg 1024w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Salicylic Acid Exfoliating Toner" loading="lazy"></div>
-        <div class="info">
-          <span class="tag">Toner</span>
-          <h3>Salicylic Acid Exfoliating Toner</h3>
-          <p class="desc">Unclogs and smooths with 2% salicylic acid and witch hazel. 150ml.</p>
-          <a href="enquiry.html" class="enquire">Enquire about this product →</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="thumb"><img src="images/acne-spray-800w.jpg" srcset="images/acne-spray-480w.jpg 480w, images/acne-spray-800w.jpg 800w, images/acne-spray.jpg 1024w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Acne Spray Treatment" loading="lazy"></div>
-        <div class="info">
-          <span class="tag">Treatment</span>
-          <h3>Acne Spray Treatment</h3>
-          <p class="desc">Salicylic acid formula that treats and prevents acne on chest and back. 150ml.</p>
-          <a href="enquiry.html" class="enquire">Enquire about this product →</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="thumb"><img src="images/night-mask-800w.jpg" srcset="images/night-mask-480w.jpg 480w, images/night-mask-800w.jpg 800w, images/night-mask.jpg 1122w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Night Mask" loading="lazy"></div>
-        <div class="info">
-          <span class="tag">Mask</span>
-          <h3>Night Mask</h3>
-          <p class="desc">Rich overnight mask with ceramides that repairs, renews and restores. 48ml.</p>
-          <a href="enquiry.html" class="enquire">Enquire about this product →</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="thumb"><img src="images/overnight-cream-800w.jpg" srcset="images/overnight-cream-480w.jpg 480w, images/overnight-cream-800w.jpg 800w, images/overnight-cream.jpg 1024w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Overnight Cream" loading="lazy"></div>
-        <div class="info">
-          <span class="tag">Night Care</span>
-          <h3>Overnight Cream</h3>
-          <p class="desc">Hydrates, repairs and renews with ceramides, hyaluronic acid and niacinamide. 20ml.</p>
-          <a href="enquiry.html" class="enquire">Enquire about this product →</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="thumb"><img src="images/eyelash-conditioner-800w.jpg" srcset="images/eyelash-conditioner-480w.jpg 480w, images/eyelash-conditioner-800w.jpg 800w, images/eyelash-conditioner.jpg 1024w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 280px" alt="Advanced Eyelash Conditioner" loading="lazy"></div>
-        <div class="info">
-          <span class="tag">Lash Care</span>
-          <h3>Advanced Eyelash Conditioner</h3>
-          <p class="desc">Lightweight serum that supports longer, fuller-looking, healthier lashes. 5ml.</p>
-          <a href="enquiry.html" class="enquire">Enquire about this product →</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -181,6 +125,25 @@
     </div>
   </div>
 </footer>
+
+<!-- Part 3: product quick-view modal -->
+<div class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="modal-box">
+    <button type="button" class="modal-close" aria-label="Close">&times;</button>
+    <img id="modal-img" src="" alt="">
+    <div class="modal-text">
+      <span class="tag" id="modal-tag"></span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <a href="enquiry.html" class="btn btn-dark">Enquire about this product</a>
+    </div>
+  </div>
+</div>
+
+<!-- Part 3: image lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <img id="lightbox-img" src="" alt="">
+</div>
 
 <script src="js/script.js"></script>
 </body>
